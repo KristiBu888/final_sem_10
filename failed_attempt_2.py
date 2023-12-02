@@ -15,15 +15,15 @@ def lst1and2(data):
     lst2 = 'Human'
     for i in data:
         if i == 'robot':
-            lst1 = lst1.append({1})
+            lst1 = lst1.append({"1"})
         else:
-            lst1 = lst1.append({0})
+            lst1 = lst1.append({"0"})
         return (lst1)
     for i in data:
         if i == 'human':
-            lst2 = lst2.append({1})
+            lst2 = lst2.append({"1"})
         else:
-            lst2 = lst2.append({0})
+            lst2 = lst2.append({"0"})
         return (lst2)
     res = pd.DataFrame({'Robot': lst1, 'Human': lst2})
     res.set_index([pd.Series([1, 2, 3, 4]), 'Robot', 'Human'])

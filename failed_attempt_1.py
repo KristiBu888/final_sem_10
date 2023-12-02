@@ -11,12 +11,12 @@ print(data)
 
 
 def table_(data) -> str:
-    rows = len(data)
-    cols = len(data[0])
+    rows = [len(data)]
+    cols = [len(data[:2])]
     new_list = []
-    rows[0] = 'robot'
-    rows[1] = 'human'
-    for i, r in enumerate(range(rows)):
+    rows[1] = rows.append('robot')
+    rows[2] = rows.append('human')
+    for i, r in range(rows):
         if data[i] == 'robot':
             new_list[r] = "1"
         else:
@@ -24,7 +24,7 @@ def table_(data) -> str:
         for c in range(cols):
             item = str(data[r][c])
             new_list.append(item)
-    print(new_list)
+        print(new_list)
 
 
 table_(data)
